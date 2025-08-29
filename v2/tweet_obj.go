@@ -76,6 +76,12 @@ type TweetObj struct {
 	Source             string                       `json:"source,omitempty"`
 	WithHeld           *WithHeldObj                 `json:"withheld,omitempty"`
 	DisplayTextRange   []int                        `json:"display_text_range,omitempty"`
+	NoteTweet          *NoteTweetObj                `json:"note_tweet,omitempty"`
+}
+
+type NoteTweetObj struct {
+	Text     string       `json:"text,omitempty"`
+	Entities *EntitiesObj `json:"entities,omitempty"`
 }
 
 // TweetAttachmentsObj specifics the type of attachment present in the tweet
